@@ -72,7 +72,7 @@ INSERT INTO spectateur VALUES
 (3,'fred', '2017-12-03 14:30:00', 'fred@mail.com',1, 2),
 (4,'guindoulette', '2017-12-04 15:40:00', 'guindoulette@mail.com',2, 2);
 
-select * from voiture;
+select * from voiture where id = 2;
 
 select * from course;
 
@@ -84,6 +84,8 @@ INNER JOIN voiture as v
 where v.id = (
 	select id from voiture where model = 'Carrera cup');
     
-
+DELETE from courseVoiture where voiture_id = 5;
 
 select * from spectateur;
+
+select * from courseVoiture;

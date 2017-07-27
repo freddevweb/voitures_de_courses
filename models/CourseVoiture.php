@@ -14,7 +14,7 @@ class CourseVoiture {
     // *********** hydrate
     public function hydrate(array $donneesTableau){
 
-        if(empty($donneesPdo) == false){
+        if(empty($donneesTableau) == false){
             foreach ($donneesTableau as $key => $value){
                 $newString=$key;
                 if(preg_match("#_#",$key)){
@@ -116,7 +116,7 @@ class CourseVoiture {
 
         return $objet->rowCount();
     }
-    
+
     public function deleteCourseVoitureForVoiture(){
         $query = "DELETE FROM courseVoiture WHERE voiture_id = :id";
         $values = array(

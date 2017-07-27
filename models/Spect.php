@@ -17,7 +17,7 @@ class Spect {
     // *********** hydrate
     public function hydrate(array $donneesTableau){
 
-        if(empty($donneesPdo) == false){
+        if(empty($donneesTableau) == false){
             foreach ($donneesTableau as $key => $value){
                 $newString=$key;
                 if(preg_match("#_#",$key)){
@@ -76,7 +76,7 @@ class Spect {
 
 
     public function save(){
-        
+
     }
 
     public function delete(){

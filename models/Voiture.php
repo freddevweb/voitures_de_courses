@@ -11,12 +11,13 @@ class Voiture {
     // *********** constructor
     public function __construct($donnees=array()){
         $this->hydrate($donnees);
+        
     }
 
     // *********** hydrate
     public function hydrate(array $donneesTableau){
 
-        if(empty($donneesPdo) == false){
+        if(empty($donneesTableau) == false){
             foreach ($donneesTableau as $key => $value){
                 $newString=$key;
                 if(preg_match("#_#",$key)){

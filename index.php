@@ -12,9 +12,18 @@ require ("models/SpectRepo.php");
 
 $db = new DbManager();
 
+$voitureRepo = $db->getVoitureRepo();
+$voiture = $voitureRepo->getVoiture(2);
+// var_dump ($voiture);
+
+$voitureRepo = $db->getVoitureRepo();
+$voitures = $voitureRepo->getVoitures(2);
+//var_dump ($voitures);
 
 
-
+$courseRepo = $db->getCourseRepo();
+$courses = $courseRepo->getAllCourses();
+//var_dump ($courses);
 
 
 

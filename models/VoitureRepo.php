@@ -23,6 +23,7 @@ class VoitureRepo {
         $voiture = $objet->fetchAll(PDO::FETCH_ASSOC);
 
         if (!empty($voiture)){
+            
             return new Voiture($voiture[0]);
         }
         return FALSE;
